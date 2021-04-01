@@ -1,6 +1,6 @@
 import React from 'react';
 import Table from './table';
-import { Button, Input, Divider, Row, Col, Space } from 'antd';
+import { Button, Input, Divider, Row, Col } from 'antd';
 
 const MainPage = () => {
   const [n, setN] = React.useState(10);
@@ -9,19 +9,19 @@ const MainPage = () => {
   // const n = 5;
   // const m = 5;
 
-  const fillArrayWithRandomNumber = (limit) => {
-    let initialNumber = 0;
-    let array = [];
-    do {
-      initialNumber = Math.floor(Math.random() * 2) + 1 + initialNumber;
-      array.push(initialNumber);
-    } while (initialNumber < limit);
-    array.pop(); // pop the last useless number
-    return array;
-  };
+  // const fillArrayWithRandomNumber = (limit) => {
+  //   let initialNumber = 0;
+  //   let array = [];
+  //   do {
+  //     initialNumber = Math.floor(Math.random() * 2) + 1 + initialNumber;
+  //     array.push(initialNumber);
+  //   } while (initialNumber < limit);
+  //   array.pop(); // pop the last useless number
+  //   return array;
+  // };
 
-  const randomX = fillArrayWithRandomNumber(n);
-  const randomY = fillArrayWithRandomNumber(m);
+  // const randomX = fillArrayWithRandomNumber(n);
+  // const randomY = fillArrayWithRandomNumber(m);
 
   const arrayX = [1, 2, 3];
   return (

@@ -1,10 +1,9 @@
-import React, { useEffect, useLayoutEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Box, VLine, HLine } from './style';
 
 const Table = ({ n = 0, m = 0, arrayX }) => {
   const [a, setA] = React.useState([]);
   const [b, setB] = React.useState([]);
-  const displayVline = [];
 
   useEffect(() => {
     const displayHline = [];
