@@ -15,7 +15,7 @@ const Table = React.forwardRef(({ n = 0, m = 0 }, ref) => {
       displayHline.push(<HLine key={i} i={i} max={n} />);
     }
     setA(displayHline);
-  }, [n]);
+  }, [n, m]);
 
   useEffect(() => {
     const displayVline = [];
@@ -24,11 +24,13 @@ const Table = React.forwardRef(({ n = 0, m = 0 }, ref) => {
       console.log('----', i);
     }
     setB(displayVline);
-  }, [m]);
+  }, [m, n]);
 
   React.useImperativeHandle(ref, () => ({
     hideLineFunctionX: (Xrandom) => {
       console.log('diux', Xrandom);
+      console.log('what is b', b);
+      console.log('what is n', n);
       const displayHline = [];
       for (let i = 0; i < n; i++) {
         const num = b[i].props.i + 1;
@@ -42,6 +44,7 @@ const Table = React.forwardRef(({ n = 0, m = 0 }, ref) => {
     },
     hideLineFunctionY: (Yrandom) => {
       const displayVline = [];
+      console.log('mmmm', m);
       for (let i = 0; i < m; i++) {
         const num = b[i].props.i + 1;
         if (Yrandom.includes(num)) {

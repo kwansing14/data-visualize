@@ -60,10 +60,10 @@ const MainPage = () => {
 
   const childRef = React.useRef();
 
-  const clickHandlerX = () => {
+  const clickHandlerX = async () => {
     const x = fillArrayWithRandomNumber(n);
-    setRandomX(x);
-    childRef.current.hideLineFunctionX(x);
+    await setRandomX(x);
+    await childRef.current.hideLineFunctionX(x);
   };
 
   const clickHandlerY = () => {
