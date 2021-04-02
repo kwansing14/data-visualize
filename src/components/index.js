@@ -69,12 +69,6 @@ const MainPage = () => {
     childRef.current.hideLineFunctionY(y);
   };
 
-  const clickHandlerY = () => {
-    const y = fillArrayWithRandomNumber(m);
-    setRandomY(y);
-    childRef.current.hideLineFunctionY(y);
-  };
-
   // sequence check and find width
   useEffect(() => {
     const v1 = sequenceCheck(randomX);
