@@ -60,10 +60,13 @@ const MainPage = () => {
 
   const childRef = React.useRef();
 
-  const clickHandlerX = async () => {
+  const clickHandler = () => {
     const x = fillArrayWithRandomNumber(n);
-    await setRandomX(x);
-    await childRef.current.hideLineFunctionX(x);
+    const y = fillArrayWithRandomNumber(m);
+    setRandomX(x);
+    setRandomY(y);
+    childRef.current.hideLineFunctionX(x);
+    childRef.current.hideLineFunctionY(y);
   };
 
   const clickHandlerY = () => {
@@ -143,11 +146,8 @@ const MainPage = () => {
           </Row>
           <Row justify="center">
             <Divider orientation="left">Actions</Divider>
-            <Button onClick={clickHandlerX} type="primary">
-              Delete random X-axis
-            </Button>
-            <Button onClick={clickHandlerY} type="primary">
-              Delete random Y-axis
+            <Button onClick={clickHandler} type="primary">
+              Change
             </Button>
           </Row>
           <Row justify="left">
